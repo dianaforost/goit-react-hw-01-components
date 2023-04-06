@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import css from './Styles/TransactionHistory.module.css'
+import css from './TransactionHistory.module.css'
 export default function TransactionHistory({items}){
 return <div className={css.container}>
 <table className={css.transactionHistory}>
