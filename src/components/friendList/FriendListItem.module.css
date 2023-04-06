@@ -16,7 +16,6 @@
     display: block;
     width: 10px;
     height: 10px;
-    background-color: black;
     border-radius: 50%;
 }
 .name{
@@ -26,9 +25,9 @@
 }
 .online{
     composes: status;
-    background-color: green;
+    background-color: #096307;
 }
 .notOnline{
     composes: status;
-    background-color: red;
+    background-color: #940200;
 }
