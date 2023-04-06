@@ -1,10 +1,12 @@
 import propTypes from 'prop-types';
+import css from './Styles/FriendListItem.module.css'
+import isFriendOnline from './isFriendOnline'
 export default function FriendListItem({friends}){
     return <>
-    {friends.map(friend =>(<li key={friend.id}>
-    <span >{friend.isOnline}</span>
-    <img  src={friend.avatar} alt="User avatar" width="48" />
-    <p >{friend.name}</p>
+    {friends.map(friend =>(<li className={css.item} key={friend.id}>
+      <span className={isFriendOnline(friend) ? css.online : css.notOnline}>{friend.isOnline}</span>
+    <img className='avatar' src={friend.avatar} alt="User avatar" width="48" />
+    <p className={css.name}>{friend.name}</p>
   </li>))}
     </>
 }
@@ -18,7 +20,4 @@ FriendListItem.propTypes = {
       })
     ).isRequired,
   };
-// FriendListItem.propTypes = {
-//     friends[avatar]:propTypes.string,
-//     name: propTypes.string.isRequired,
-// }
+  
