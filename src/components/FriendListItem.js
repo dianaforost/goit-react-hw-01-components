@@ -20,3 +20,4 @@ FriendListItem.propTypes = {
       })
     ).isRequired,
   };
+  
