@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import css from './Styles/Profile.module.css'
+import css from './Profile.module.css'
 export default function Profile({username, tag, location, avatar, followers, views, likes}){
     return <div className={css.profile}>
     <div className={css.description}>
