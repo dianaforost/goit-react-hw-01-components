@@ -24,6 +24,6 @@ Statistics.propTypes = {
       ]).isRequired,
       label: propTypes.string.isRequired,
       percentage: propTypes.number.isRequired,
-    })
+    }).isRequired,
   ).isRequired,
 };

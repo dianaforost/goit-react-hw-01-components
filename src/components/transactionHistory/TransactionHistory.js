@@ -4,7 +4,7 @@ export default function TransactionHistory({items}){
 return <div className={css.container}>
 <table className={css.transactionHistory}>
 <thead className={css.titles}>
-  <tr>
+  <tr className={css.tableHeader}>
     <th className={css.label}>Type</th>
     <th className={css.label}>Amount</th>
     <th className={css.label}>Currency</th>
@@ -12,7 +12,7 @@ return <div className={css.container}>
 </thead>
 
 <tbody>
-    {items.map(item => (<tr key={item.id}>
+    {items.map((item, index) => (<tr className={index % 2 === 0 ? css.normal : css.marked} key={item.id}>
         <td className={css.type}>{item.type}</td>
         <td className={css.amount}>{item.amount}</td>
         <td className={css.currency}>{item.currency}</td></tr>))}
@@ -30,6 +30,6 @@ TransactionHistory.propTypes = {
         type: propTypes.string.isRequired,
         amount: propTypes.string.isRequired,
         currency: propTypes.string.isRequired,
-      })
+      }).isRequired,
     ).isRequired,
   };
