@@ -10,6 +10,20 @@
     border-spacing: 50px 18px;
     box-shadow: 1px 0px 10px 0px rgba(66, 68, 90, 0.38);
 }
+.tableHeader, .normal, .marked{
+    width: 370px;
+    display: flex;
+    justify-content: space-around;
+    padding: 6px 3px;
+}
+.normal{
+    background-color: #fff;
+    color: #768091;
+}
+.marked{
+    background-color: #808080;
+    color: white;
+}
 .titles{
     border-bottom: 1.5px solid #808080;
 }
@@ -19,5 +33,5 @@
 }
 .type, .amount, .currency{
     font-size: 17px;
-    color: #768091;
+    /* color: #768091; */
 }
